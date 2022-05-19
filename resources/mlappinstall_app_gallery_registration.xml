@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <toolset id="user_apps_toolset" template="false">
-   <tool app_file_path="./" handler_class="com.mathworks.appmanagement.desktop.ToolboxToolSetExtensionHandler" id="786e8f67-a371-44fa-8876-10a81a869d58" label="BehaviorDEPOT" toolset_id="user_apps_toolset">
-      <callback>matlab.apputil.run('BehaviorDEPOTAPP')</callback>
-      <summary>BehaviorDEPOT v1.0 application for analyzing top-down rodent DLC tracking and automatic behavior classification</summary>
+   <tool app_file_path="./" handler_class="com.mathworks.appmanagement.desktop.ToolboxToolSetExtensionHandler" id="e2060567-d81d-4dda-a663-2873a8df89af" label="BehDEPOT_v045" toolset_id="user_apps_toolset">
+      <callback>matlab.apputil.run('BehDEPOT_v045APP')</callback>
+      <description>new in 0.45:  
+CHANGE
+&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;batch processing of cues:  when batch processing and analyzing cues, you can now autoload cues by adding a csv cue file into the folder to be processed. NB: the cue file must have the phrase "cue" in the title (conversely, the tracking file must NOT have "cue" in the title)
+&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;cue-based analysis breakdown. In Behavior_Filter, relevant components now breakdown cue-based analysis as vectors for each cue. These are located in
+ &lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;Behavior_Filter.Temporal.[event].[behavior].Cue_BehInEventVector (for behavior vectors during each event), &lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;Behavior_Filter.Intersect.ROIduringCue_Vector.[event[_[ROI] (for vectors of events in which the animal is in the ROI), and &lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;Behavior_Filter.Intersect.SpaTemBeh.[behavior]_[ROI]_[event]_CueVectors (for vectors pf cue times when the animal was both in the ROI and engaging in behavior).</description>
       <parent_tool id="my_apps" toolset_id="apps_toolset"/>
    </tool>
 </toolset>
